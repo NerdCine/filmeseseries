@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Verificação de Robô</title>
+  <style>
+    .container {
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Verificação de Robô</h1>
+    <p>Por favor, resolva a seguinte soma para continuar:</p>
+    <div id="captcha"></div>
+    <input type="text" id="answer" placeholder="Digite o resultado aqui">
+    <button onclick="checkAnswer()">Verificar</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function generateCaptcha() {
+      var num1 = Math.floor(Math.random() * 10);
+      var num2 = Math.floor(Math.random() * 10);
+      var captcha = document.getElementById("captcha");
+      captcha.textContent = num1 + " + " + num2;
+      captcha.setAttribute("data-answer", num1 + num2);
+    }
+
+    function checkAnswer() {
+      var userAnswer = parseInt(document.getElementById("answer").value);
+      var captchaAnswer = parseInt(document.getElementById("captcha").getAttribute("data-answer"));
+      var resultMessage = document.getElementById("result");
+
+      if (isNaN(userAnswer)) {
+        resultMessage.textContent = "Por favor, digite um número válido.";
+      } else if (userAnswer === captchaAnswer) {
+        resultMessage.textContent = "Verificação bem-sucedida! Você não é um robô.";
+        // Redirecionar para a próxima página após 2 segundos
+        setTimeout(function() {
+          window.location.href = "proxima_pagina.html";
+        }, 2000);
+      } else {
+        resultMessage.textContent = "Resposta incorreta. Por favor, tente novamente.";
+      }
+
+      generateCaptcha();
+      document.getElementById("answer").value = "";
+    }
+
+    // Gerar o primeiro captcha
+    generateCaptcha();
+  </script>
+</body>
+</html>

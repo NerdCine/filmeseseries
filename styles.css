@@ -1,0 +1,189 @@
+body{
+    background-color: black;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.logo{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35vw;
+
+}
+
+.menu
+{
+    margin-top: 5px;
+    margin-left: 2vw;
+    width: 8vw;
+    filter: invert(100%);
+    position: absolute;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    background-color: #eeeeee0d;
+}
+
+.bannerdestaque{
+    display: flex;
+    overflow: hidden;
+    border-style: solid;
+}
+
+.cartazdestaque{
+    object-fit: cover;
+    width: 100%;
+}
+
+.playdestaque{
+    margin-left: 15%;
+    margin-top: 18%;
+    position:absolute;
+    height: 70px;
+    width: 70px;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 100%;
+    background-color: #000;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .carousel-item {
+    flex: 0 0 auto;
+    width: 180px;
+    margin-right: 10px;
+    scroll-snap-align: start;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    border-radius: 4px;
+    border-style: solid;
+  }
+  
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .carousel-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .carousel-arrow.left {
+    left: 10px;
+  }
+  
+  .carousel-arrow.right {
+    right: 10px;
+  }
+  
+.titulogen{
+    color: white;
+}
+
+.categorias{
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+    height: 45px;
+}
+
+.film{
+  width: 100%;
+}
+
+.nomedofilme{
+  display: block;
+  margin: 0px auto;
+  margin-left: 5%;
+  text-align:justify;
+  color: white;
+  display: flex;
+  font-size: 12px;
+}
+
+.sinopse{
+  text-align: justify;
+  margin-right: 5%;
+  color: white;
+  margin-left: 5%;
+}
+.capadofilme{
+  margin: 0px auto;
+  display: block;
+  border: solid;
+  border-color: white;
+  height: 35vw;
+}
+
+.infofilmstitle{
+  text-align: center;
+  color: white;
+}
+
+.infofilms{
+  border-radius: 10px;
+  border: solid;
+  border-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  background-color: rgba(255, 255, 255, 0.098);
+}
+
+@media (min-width: 720px) {
+  nav{
+    display: none;
+  }
+  
+  div.conteudo {
+    /* Estilos para o conteúdo do body quando o dispositivo for maior que 720px */
+    /* Por exemplo, pode ser um fundo diferente, estilos de fonte diferentes, etc. */
+    display: none;
+  }
+
+  body::after {
+    /* Estilos para a mensagem de "Desenvolvimento" */
+    content: " Em manutenção! Em breve disponivel para Tablet, Desktop e TV ⚠️";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff0000;
+  }
+}
